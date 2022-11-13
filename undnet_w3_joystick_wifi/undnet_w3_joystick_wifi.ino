@@ -43,7 +43,7 @@ void setup() {
     WiFi.begin(SECRET_SSID, SECRET_PASSWORD); //try to connect
     delay(3000);
   }
-
+  
   printWifiStatus();
 
   pinMode(connectBtn, INPUT_PULLUP);
@@ -72,7 +72,7 @@ void loop() {
         client.connect(server, 8080);
       } else {  // else disconnect:
         Serial.println("disconnecting");
-        client.print("x");
+        client.print("x"); //this is for the game
         client.stop();
       }
     }
